@@ -1,9 +1,16 @@
 # Mutational Similarity Score (mskcc-mutational-similarity-score)
 ### Diaz Laboratory | MSKCC
 This is a version-controlled codebase for the mutational similarity score project
-under the Diaz Lab at Memorial Sloan Kettering Cancer Center. The purpose of the code
-is to utilize shared mutation observations between two input samples to estimate the 
-likelihood of sharing the same origin. 
+under the Diaz Lab at Memorial Sloan Kettering Cancer Center. 
+
+### Introduction
+The purpose of the code is to utilize shared mutation observations between two input samples to estimate the 
+likelihood of sharing the same origin. The primary script `A01-mutational-profile-similarity.pl` can be run 
+from the command line by providing two single-column input text files with the mutations observed for the
+two samples to be compared. The input file mutation format is based on [TCGA MAF formatted coordinates](https://docs.gdc.cancer.gov/Data/File_Formats/MAF_Format): `<gene name>`\_`<chr#>`\_`<beginning coordinate>`\-`<ending coordinate>`\_`<ref allele>`\_`<alt allele>` for example: `BRAF_chr7_140453136-140453136_A_T`. 
+
+You will also need to select a cancer set and panel type to serve as the background database. See the `Usage` sections below for more information.
+
 
 ### Repository Structure
 * Top-level directory: `mskcc-mutational-similarity-score/`
@@ -12,6 +19,7 @@ likelihood of sharing the same origin.
 ├── A01-mutational-profile-similarity.pl     <-- main code to run similarity assessment
 ├── B01-example_data_run.sh                  <-- example runs using samples from Chaudhuri et al. 2017
 ├── README.md                                <-- this readme file
+├── example-msi-mss-results                  <-- MPS results summary of MSS and MSI CRC / UCEC samples
 └── supporting-materials         
     ├── background_dbs                       <-- reference lists of mutations (.gz) and sample types (.txt)
     │   ├── COADMSS.samples.txt
