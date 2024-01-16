@@ -32,7 +32,7 @@ You will also need to select a cancer set and panel type to serve as the backgro
 ```
 
 ### Requirements
-This code requires Perl (v5.30) and a few other modules to be installed in order to run (e.g. via cpan):
+This code requires Perl (v5.30) and the following other modules to be installed in order to run (e.g. via cpan):
 * File::Spec
 * Data::Dumper
 * List::Util
@@ -121,6 +121,10 @@ OVERALL PROBABILITY OF RELATEDNESS: 99.784% 95%CI:(98.606%,99.989%)
 ./B01-example_data_run.sh
 ```
 
+### Notes on Runtime (on a normal desktop computer)
+* Installation of Perl modules via cpan requires less than 10 minutes (if not already installed).
+* Uncompression of gzipped source files requires less than 1 minute run time.
+* Demo runs require less than 1 minute run time.
 
 ## [Issues and Requests](https://github.com/resphera-jrwhite/mskcc-mutational-similarity-score/issues)
 For stakeholders interested in requests for data transfers, methods developement, analyses, documentation, etc, please visit the [issues](https://github.com/resphera-jrwhite/mskcc-mutational-similarity-score/issues) tab to submit a ticket. Please select an associated label, mention users in the description and assign to a username when possible.
